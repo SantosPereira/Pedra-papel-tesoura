@@ -1,3 +1,8 @@
+"""
+TO DO: Emitir sons quando houver vitória ou derrota no jogo
+"""
+
+
 from random import randint as random
 from time import sleep
 #from pisca import pisca
