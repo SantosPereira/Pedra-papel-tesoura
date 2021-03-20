@@ -19,20 +19,19 @@ sleep(1.5)
 
 
 def play():
-    print('Escolha:\n[1] Para Pedra\n[2] Para Papel\n[3] Para Tesoura\n\n\n\n')
+    print('Escolha:\n[\033[1;31m1\033[0;0m] Para Pedra\n[\033[1;31m2\033[0;0m] Para Papel\n[\033[1;31m3\033[0;0m] Para Tesoura\n\n\n\n')
     sleep(1)
     '''
-    # --> fica rodando infinitamente
+    # --> Preciso fazer laço ficar rodando mesmo durante o input
     while True:
         print('\x1b[2K\r', end='', flush=True)
         print('\033[1;32m>>\033[0;0m', end='', flush=True)
         sleep(0.5)
         print('\x1b[2K\r', end='  ', flush=True)
-        sleep(0.5)'''
-
-    ''' Minha intenção no trecho de código acima era fazer '>>' ficar piscando na tela e
-    quando fosse digitado algo no input ele ler a entrada, porém o input para o programa'''
-
+        sleep(0.5)
+    player1 = input()
+    Minha intenção no trecho de código acima era fazer '>>' ficar piscando na tela'''
+    
     player1 = input('\033[1;32m>>\033[0;0m')
     player2 = random(1,3) # [1] é pedra, [2] é papel, [3] é tesoura
    
