@@ -4,7 +4,7 @@ TO DO: Emitir sons quando houver vitória ou derrota no jogo
 from random import randint as random
 from time import sleep
 
-sleep(1)
+sleep(0.5)
 print('''\n\n\n
 ▒█▀▀█ █▀▀ █▀▀▄ █▀▀█ █▀▀█ ░░ 　 ▒█▀▀█ █▀▀█ █▀▀█ █▀▀ █░░ 　 █▀▀█ █░░█ 　 ▀▀█▀▀ █▀▀ █▀▀ █▀▀█ █░░█ █▀▀█ █▀▀█ 
 ▒█▄▄█ █▀▀ █░░█ █▄▄▀ █▄▄█ ▄▄ 　 ▒█▄▄█ █▄▄█ █░░█ █▀▀ █░░ 　 █░░█ █░░█ 　 ░▒█░░ █▀▀ ▀▀█ █░░█ █░░█ █▄▄▀ █▄▄█ 
@@ -13,7 +13,7 @@ print('''\n\n\n
 ▀█░█▀ ▄█░ ░ █▀▀█ 
 ░█▄█░ ░█░ ▄ █▄▀█ 
 ░░▀░░ ▄█▄ █ █▄▄█\n\n''')
-sleep(1.5)
+sleep(1)
 
 
 
@@ -32,31 +32,32 @@ def play():
     player1 = input()
     Minha intenção no trecho de código acima era fazer '>>' ficar piscando na tela'''
     
-    player1 = input('\033[1;32m>>\033[0;0m')
+    player1 = input('\033[1;32m>>\033[0;0m ')
     player2 = random(1,3) # [1] é pedra, [2] é papel, [3] é tesoura
    
-
+    sleep(1.5)
     if player1 == '1':
-        input('\n\nVocê escolheu: Pedra')
+        print('\n\nVocê escolheu: Pedra')
     elif player1 == '2':
-        input('\n\nVocê escolheu: Papel')
+        print('\n\nVocê escolheu: Papel')
     elif player1 == '3':
-        input('\n\nVocê escolheu: Tesoura')
+        print('\n\nVocê escolheu: Tesoura')
     else:
         print('Entrada inválida')
 
+    sleep(1.5)
     if player2 == 1:
-        input('Computador escolheu: Pedra\n')
+        print('Computador escolheu: Pedra\n')
     elif player2 == 2:
-        input('Computador escolheu: Papel\n')
+        print('Computador escolheu: Papel\n')
     elif player2 == 3:
-        input('Computador escolheu: Tesoura\n')
+        print('Computador escolheu: Tesoura\n')
     else:
         print('Entrada inválida')
 
 
 
-
+    sleep(1)
     if player1 == '1': # Pedra
         if player2 == 1: #pedra é igual a pedra -> empate
             input('Empate!!\nJogue de novo\n\n\n')
@@ -92,8 +93,8 @@ def play():
             input('Empate!!\nJogue de novo\n\n\n')
             play()
 
-    
-    jogar_de_novo = input('\n\nJogar novamente? [S/N]\n\033[1;32m>>\033[0;0m')
+    sleep(1.5)
+    jogar_de_novo = input('\n\nJogar novamente? [S/N]\n\033[1;32m>>\033[0;0m ')
     print('\n\n\n')
     if jogar_de_novo == 's':
         play()
