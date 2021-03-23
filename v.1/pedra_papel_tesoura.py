@@ -3,6 +3,9 @@ TO DO: Emitir sons quando houver vitória ou derrota no jogo
 """
 from random import randint as random
 from time import sleep
+import os
+
+os.system('cls')
 
 sleep(0.5)
 print('''\n\n\n
@@ -97,6 +100,10 @@ def play():
     jogar_de_novo = input('\n\nJogar novamente? [S/N]\n\033[1;32m>>\033[0;0m ')
     print('\n\n\n')
     if jogar_de_novo == 's':
+        try:
+            os.system('cls')
+        except:
+            os.system('clear')
         play()
     elif jogar_de_novo == 'n':
         exit()
